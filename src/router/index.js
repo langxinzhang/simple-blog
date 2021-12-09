@@ -7,7 +7,7 @@ export default new VueRouter({
     routes:[
         {
             path:'/',
-            redirect:'/show'
+            redirect:'/show'//路由重定向
         },
         {
         name:'showblog',

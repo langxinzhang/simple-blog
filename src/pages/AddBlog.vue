@@ -26,9 +26,7 @@
           <div class="row">
               <div class="text"></div>
               <div class="intext"> <button @click="objSubmit">发表博客</button></div>
-             
             </div>
-          
       </div>
   </div>
 </template>

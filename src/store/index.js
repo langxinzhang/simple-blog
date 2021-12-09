@@ -1,9 +1,10 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import axios from 'axios'
-Vue.use(Vuex)
+Vue.use(Vuex)//使用vuex插件
 const actions={
     getData(context){
+        // 请求数据
         axios.get('https://jsonplaceholder.typicode.com/posts'
         )
         .then(
@@ -18,6 +19,7 @@ const actions={
    },
 }
 const mutations={
+    //处理数据
     GetData(state,value){
         state.message=value
     },

@@ -1,25 +1,22 @@
 <template>
   <div id="app">
    <HdView></HdView>
-   只需要缓存
+   <!-- 只需要缓存showBlog -->
    <keep-alive include="ShowBlog">
     <router-view ></router-view>
    </keep-alive>
-  
-   <HtView></HtView>
+   <FtView></FtView>
   </div>
 </template>
 
 <script>
 import HdView from './components/HdView'
-import HtView from './components/FtView'
-// import ShowBlog from './components/ShowBlog'
+import FtView from './components/FtView'
 export default {
   name: 'App',
   components: {
     HdView,
-    HtView
-    // ShowBlog
+    FtView
   }
 }
 </script>

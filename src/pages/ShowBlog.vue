@@ -10,6 +10,7 @@
                   {{m.body}}
               </div>
               <div class="bottom">
+                  <!-- 使用的api请求回来的数据没有分类 -->
                   <div class="classify"><span>分类：vue.js</span></div>
                   <div class="author"><span>作者：{{m.userId}}</span> </div>
               </div>
@@ -36,14 +37,14 @@ export default {
         }
     },
     created() {
-        //将
+        // 在vuex中请求数据
         this.$store.dispatch('getData')
     },
     mounted() {
-        
         //  this.$nextTick(this.jump(this.p))
     },
     computed:{
+        // 读取vuex中的数据
         ...mapState(['message'])
     },
     watch:{
@@ -70,25 +71,23 @@ export default {
         
         // },
         jump(n){
-            // this.pageData=this.$store.state.message.slice((n-1)*10,n*10)
             this.pageData=this.message.slice((n-1)*10,n*10)
         },
         forward(){
             if(this.page>1){
                 this.page--
-                // this.pageData=this.message.slice((this.p-1)*10,this.p*10)
                 this.jump(this.page)
                 window.scrollTo(0,0)
             }else {
-                // this.pageData=this.message.slice((this.p-1)*10,this.p*10)
+                
                 this.jump(this.page)
             }
         },
         next(){
             if(this.page<(this.message.length/10)){
             this.page++
-            // this.pageData=this.message.slice((this.p-1)*10,this.p*10)
             this.jump(this.page)
+            // 换页时回到顶部
             window.scrollTo(0,0)
             }
         },
@@ -123,7 +122,6 @@ export default {
     background:rgb(59, 194, 126);
     color: #fff;
 }
-
 .list{
     padding: 30px;
 }

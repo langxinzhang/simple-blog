@@ -4,8 +4,6 @@
           <img src="../assets/logo.png" alt="">
       </div>
       <div class="link">
-          <!-- <a href="">博客列表</a> -->
-          <!-- <a href="">写博客</a> -->
           <router-link to="/show">博客列表</router-link>
           <router-link to="/add">写博客</router-link>
       </div>
